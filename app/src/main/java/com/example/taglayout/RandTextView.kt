@@ -21,7 +21,8 @@ class RandTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(co
     init {
         setTextColor(Color.WHITE)
         textSize = textSizeArray[random.nextInt(3)].toFloat()
-
+        paint.setARGB(255, random.nextInt(256), random.nextInt(256), random.nextInt(256))
+        setSingleLine()
         setPadding(X_PADDING, Y_PADDING, X_PADDING, Y_PADDING)
     }
 
